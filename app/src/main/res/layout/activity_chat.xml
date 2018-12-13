@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/lin1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:fillViewport="true"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true" >
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout"
+            android:background="@android:color/darker_gray"
+            tools:context=".ChatActivity">
+
+            <TextView
+                android:id="@+id/txtMessageReceiver"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start a conversation about your requirements with (add username)" />
+
+
+            <LinearLayout
+                android:id="@+id/fr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                    android:id="@+id/recyclerViewID3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                 />
+
+                <TextView
+                    android:id="@+id/empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="No Records"
+                    android:visibility="gone" />
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+        <!-- content fixated to the bottom of the screen -->
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:minHeight="80dp">
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Type a message..."
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+        />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_menu_send" />
+
+    </LinearLayout>
+
+</RelativeLayout>

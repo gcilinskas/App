@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Freelance</string>
+    <string name="txtRegister">Not Registered Yet?</string>
+    <string name="txtLogin">Email</string>
+    <string name="facebook_app_id">190888045128135</string>
+    <string name="fb_login_protocol_scheme">fb190888045128135</string>
+</resources>

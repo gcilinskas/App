@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/jobPostTitle"
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:hint="title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/jobPostCategory"
+                android:layout_below="@id/jobPostTitle"
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:hint="category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/jobPostSubCategory"
+                android:layout_below="@id/jobPostCategory"
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:hint="subcategory"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/jobPostDescription"
+                android:layout_below="@id/jobPostSubCategory"
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:hint="Description"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/jobPostPrice"
+                android:layout_below="@id/jobPostDescription"
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:hint="Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/jobPostLocation"
+                android:layout_below="@id/jobPostPrice"
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:hint="location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/jobPostDateAdded"
+                android:layout_below="@id/jobPostLocation"
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:hint="date added"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:id="@+id/jobPostImage"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/jobPostTitle"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="-153dp"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:id="@+id/jobPostEdit"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit"/>
+        <Button
+            android:background="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:id="@+id/jobPostDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"/>
+    </LinearLayout>
+</LinearLayout>
